@@ -1,0 +1,30 @@
+.personal-loans-section {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 700px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-height: 80vh; /* Altura máxima del modal */
+    overflow-y: auto; /* Habilitar el scroll vertical si es necesario */
+  }
+  
+  .form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
+  
+  .form-row .textfield {
+    flex: 1;
+    margin-right: 10px;
+  }
+  
+    

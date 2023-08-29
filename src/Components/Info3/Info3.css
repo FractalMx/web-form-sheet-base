@@ -1,0 +1,91 @@
+.loan-requirements-section {
+    background-color: #87CEEB;
+    padding: 20px;
+    padding-bottom: 0px;
+    position: relative;
+  }
+  
+  .requirements-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  
+  .requirements-list {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+  }
+  
+  
+  
+  .icon {
+    font-size: 48px;
+    color: #001F3F;
+  }
+  
+  .requirement-text {
+    color: #001F3F;
+  }
+  
+  .additional-content {
+    position: relative;
+  }
+  
+  .additional-text {
+    color: #999999;
+    font-size: 12px;
+    text-align: left;
+    
+  }
+  
+  .image-container {
+    margin-top: 50px;
+  }
+  
+  .right-image {
+    position: relative;
+    
+    max-height: 100%; /* Ajusta la altura de la imagen */
+  }
+  
+  .right-image img {
+    width: 100%;
+    height: auto;
+  }
+  
+  @media (max-width: 768px) {
+    .requirements-list {
+      flex-direction: column;
+    }
+  
+    .requirement {
+      margin-bottom: 10px;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .additional-content {
+      text-align: center;
+    }
+  
+    .additional-text {
+      position: static;
+      text-align: center;
+    }
+  
+    .image-container {
+      
+      margin-top: 50px;
+    }
+    .right-image img {
+        width: 60%;
+        height: auto;
+    }
+    .button-and-phone {
+        display: flex;
+       background-color: red;
+      
+        margin-top: 20px;
+      }
+  }
