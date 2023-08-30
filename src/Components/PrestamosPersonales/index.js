@@ -66,7 +66,7 @@ const PrestamosPersonales = () => {
       </Typography>
       <Button variant="contained" sx={{ backgroundColor: "#358930" }}onClick={handleOpenModal}>
         Inicia tu solicitud
-      </Button>
+      </Button> 
       <Modal open={modalOpen} onClose={handleCloseModal}>
         <div className="modal-content">
           <IconButton aria-label="Cerrar" onClick={handleCloseModal} sx={{ position: 'absolute', top: 0, right: 0 }}>
