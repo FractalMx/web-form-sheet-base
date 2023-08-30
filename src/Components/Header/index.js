@@ -11,7 +11,7 @@ const Header = () => {
         <img src={logo} alt="Logo" className="logo" />
         <div className="contact">
           <div className="contact-info">
-            <Email />
+            <Email /> 
             <Typography variant="body2" color="#e46721">ejemplo@email.com</Typography>
           </div>
           <div className="contact-info">
