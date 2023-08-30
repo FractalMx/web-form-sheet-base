@@ -3,7 +3,7 @@ import { AppBar, Toolbar, Typography, Button, IconButton } from '@mui/material';
 import { Email, Phone, Facebook, Twitter, Instagram } from '@mui/icons-material';
 import './Header.css';
 import logo from '../../img/logo.png'; // Asegúrate de tener este logo en tu proyecto
-
+import { HashLink } from "react-router-hash-link";
 const Header = () => {
   return (
     <AppBar position="static" className="header" sx={{backgroundColor: "white"}}>
@@ -29,7 +29,13 @@ const Header = () => {
               <Instagram sx={{ color: "#104409" }}/>
             </IconButton>
           </div>
-          <Button variant="contained"  sx={{ backgroundColor: "#e46721" }}className="solicitar-button">
+          <Button 
+            component={HashLink}
+            variant="contained"  
+            sx={{ backgroundColor: "#e46721" }}
+            className="solicitar-button"
+            to={"/#solicitar"}
+          >
             Solicitar
           </Button>
         </div>

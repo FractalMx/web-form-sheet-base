@@ -32,6 +32,5 @@ export const router = createBrowserRouter([
         errorElement: <NoMatch />,
       },
     ]
-  },
-  
+  }
 ]);
