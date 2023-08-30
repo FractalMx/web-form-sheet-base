@@ -10,7 +10,9 @@
 
 # production
 /build
-/src/img
+/src/img/young-man.jpg
+/src/img/woman-money.png
+
 # misc
 .DS_Store
 .env.local
