@@ -64,14 +64,14 @@ const PersonalLoansSection = () => {
   };
 
   return (
-    <Box className="personal-loans-section" bgcolor="blue" py={6} display="flex" flexDirection="column" alignItems="center">
+    <Box className="personal-loans-section" bgcolor="#df9222" py={6} display="flex" flexDirection="column" alignItems="center">
       <Typography variant="h4" align="center" sx={{ marginBottom: '20px', color: 'white' }}>
-        Préstamos Personales desde $200 soles hasta $700 soles
+        Préstamos Personales desde $$x hasta $x
       </Typography>
       <Typography variant="body2" align="center" sx={{ marginBottom: '20px', color: 'white' }}>
         Paga puntual tu préstamo y accede a montos mayores automáticamente
       </Typography>
-      <Button variant="contained" color="primary" onClick={handleOpenModal}>
+      <Button variant="contained" sx={{ backgroundColor: "#358930" }} onClick={handleOpenModal}>
         Inicia tu solicitud 
       </Button>
       <Modal open={modalOpen} onClose={handleCloseModal}>

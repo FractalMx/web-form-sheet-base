@@ -57,14 +57,14 @@ const PrestamosPersonales = () => {
     console.log(formValues);
   };
   return (
-    <Box className="personal-loans-section" bgcolor="yellow" py={6} display="flex" flexDirection="column" alignItems="center">
+    <Box className="personal-loans-section" bgcolor="#e4a276" py={6} display="flex" flexDirection="column" alignItems="center">
       <Typography variant="h4" align="center" sx={{ marginBottom: '20px' }}>
-        Préstamos Personales desde $200 soles hasta $700 soles
+        Préstamos Personales desde $x soles hasta $x soles
       </Typography>
       <Typography variant="body2" align="center" sx={{ marginBottom: '20px' }}>
         Paga puntual tu préstamo y accede a montos mayores automáticamente
       </Typography>
-      <Button variant="contained" color="primary" onClick={handleOpenModal}>
+      <Button variant="contained" sx={{ backgroundColor: "#358930" }}onClick={handleOpenModal}>
         Inicia tu solicitud
       </Button>
       <Modal open={modalOpen} onClose={handleCloseModal}>
@@ -73,7 +73,7 @@ const PrestamosPersonales = () => {
             <CloseIcon />
           </IconButton>   
           <Typography variant="h6" align="center" sx={{ marginBottom: '20px' }}>
-            Préstamos Personales desde $200  hasta $700 
+            Préstamos Personales desde $x  hasta $X 
           </Typography>
          
           <form onSubmit={handleSubmit}>
@@ -179,7 +179,7 @@ const PrestamosPersonales = () => {
                 required
               />
             </div>
-            <Button type="submit" variant="contained" color="primary" fullWidth>
+            <Button type="submit" variant="contained" sx={{ backgroundColor: "#e4a276" }}fullWidth>
               Enviar Solicitud
             </Button>
           </form>

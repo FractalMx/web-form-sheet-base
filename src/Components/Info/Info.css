@@ -7,6 +7,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+   
   }
   
   .colored-background {
@@ -23,19 +24,19 @@
   }
   
   .blue-bg {
-    background-color: #66b3ff;
+    background-color: #e46721;
    
     color: white;
    
   }
   .green-bg {
-    background-color: #069258;
+    background-color: #1d521b;
   
     color: white;
     
   }
   .woman-image {
-    
+    position: absolute;
     max-width: 100%;
     border-radius: 10px;
 

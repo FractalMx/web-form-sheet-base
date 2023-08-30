@@ -43,7 +43,7 @@ function MainLayout() {
         </Box>
        
       </Container>
-      <Footer description="Descripción empresa" title="Nombre empresa" />
+      <Footer description="Créditos Yadiel" title="Créditos Yadiel" />
       
      
      

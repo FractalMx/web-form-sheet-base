@@ -6,30 +6,30 @@ import logo from '../../img/logo.png'; // Asegúrate de tener este logo en tu pr
 
 const Header = () => {
   return (
-    <AppBar position="static" className="header">
+    <AppBar position="static" className="header" sx={{backgroundColor: "white"}}>
       <Toolbar className="toolbar">
         <img src={logo} alt="Logo" className="logo" />
         <div className="contact">
           <div className="contact-info">
             <Email />
-            <Typography variant="body2">ejemplo@email.com</Typography>
+            <Typography variant="body2" color="#e46721">ejemplo@email.com</Typography>
           </div>
           <div className="contact-info">
             <Phone />
-            <Typography variant="body2">(123) 456-7890</Typography>
+            <Typography variant="body2"  color="#e46721">(123) 456-7890</Typography>
           </div>
           <div className="social-buttons">
-            <IconButton color="inherit">
-              <Facebook />
+            <IconButton >
+              <Facebook sx={{ color: "#104409" }}/>
             </IconButton>
-            <IconButton color="inherit">
-              <Twitter />
+            <IconButton >
+              <Twitter sx={{ color: "#104409" }}/>
             </IconButton>
-            <IconButton color="inherit">
-              <Instagram />
+            <IconButton >
+              <Instagram sx={{ color: "#104409" }}/>
             </IconButton>
           </div>
-          <Button variant="contained" color="primary" className="solicitar-button">
+          <Button variant="contained"  sx={{ backgroundColor: "#e46721" }}className="solicitar-button">
             Solicitar
           </Button>
         </div>

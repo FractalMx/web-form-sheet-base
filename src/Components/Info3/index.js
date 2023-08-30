@@ -12,7 +12,7 @@ import rightImage from "../../img/right-image.png";
 const LoanRequirementsSection = () => {
   const isDesktop = useMediaQuery('(min-width: 1024px)');
   return (
-    <Box className="loan-requirements-section" sx={{background: 'linear-gradient(to top, #ffffff, #87CEEB)'}}>
+    <Box className="loan-requirements-section" sx={{background: 'linear-gradient(to top, #ffffff, #e4a276)'}}>
       <Typography variant="h4" sx={{ color: "#001F3F", marginBottom: "20px" }}>
         ¿Qué necesita para su <strong>préstamo</strong>?
       </Typography>
