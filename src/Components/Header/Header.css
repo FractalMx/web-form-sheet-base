@@ -16,6 +16,22 @@
   .contact {
     display: flex;
     align-items: center;
+   
+  }
+  .contactNoDesktop {
+    display: flex;
+    
+    justify-content: center;
+    flex-direction: row;
+    align-items: flex-start;
+   
+  }
+  
+  .contact-info-nodesktop {
+    display: flex;
+    align-items: center;
+    margin-right: 16px;
+    margin-top:  10px;;
   }
   
   .contact-info {

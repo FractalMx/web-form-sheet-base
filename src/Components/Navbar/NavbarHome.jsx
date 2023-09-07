@@ -25,7 +25,7 @@ const pages = [
     component: HashLink,
   },
   {
-    title: "Nosotros",
+    title: "Quiénes somos",
     route: "/nosotros",
     component: HashLink,
   },

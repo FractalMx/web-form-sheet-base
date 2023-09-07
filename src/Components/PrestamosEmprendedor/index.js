@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import {
   Box,
   Typography,
@@ -13,39 +13,39 @@ import {
   FormHelperText,
   Checkbox,
   FormControlLabel,
-} from '@mui/material';
-import CloseIcon from '@mui/icons-material/Close';
-import './PrestamosEmprendedor.css'; // Asegúrate de tener el archivo CSS
+} from "@mui/material";
+import CloseIcon from "@mui/icons-material/Close";
+import "./PrestamosEmprendedor.css"; // Asegúrate de tener el archivo CSS
 
 const PersonalLoansSection = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [formValues, setFormValues] = useState({
     tieneNegocio: false,
-    nombreNegocio: '',
-    apellido: '',
-    dni: '',
-    telefono: '',
-    correo: '',
-    telefonoPersonal: '',
-    direccion: '',
-    tipoVivienda: '',
-    personasContigo: '',
-    departamento: '',
-    distrito: '',
-    estadoCivil: '',
-    hijos: '',
-    ocupacion: '',
-    empresa: '',
-    ingresosMensuales: '',
-    otrosIngresos: '',
-    montoPedido: '',
-    cuotas: '',
-    codigoInvitacion: '',
+    nombreNegocio: "",
+    apellido: "",
+    dni: "",
+    telefono: "",
+    correo: "",
+    telefonoPersonal: "",
+    direccion: "",
+    tipoVivienda: "",
+    personasContigo: "",
+    departamento: "",
+    distrito: "",
+    estadoCivil: "",
+    hijos: "",
+    ocupacion: "",
+    empresa: "",
+    ingresosMensuales: "",
+    otrosIngresos: "",
+    montoPedido: "",
+    cuotas: "",
+    codigoInvitacion: "",
   });
 
   const handleInputChange = (event) => {
     const { name, value, type, checked } = event.target;
-    const newValue = type === 'checkbox' ? checked : value;
+    const newValue = type === "checkbox" ? checked : value;
     setFormValues({ ...formValues, [name]: newValue });
   };
 
@@ -64,23 +64,53 @@ const PersonalLoansSection = () => {
   };
 
   return (
-    <Box className="personal-loans-section" bgcolor="#df9222" py={6} display="flex" flexDirection="column" alignItems="center">
-      <Typography variant="h4" align="center" sx={{ marginBottom: '20px', color: 'white' }}>
+    <Box
+      className="personal-loans-section"
+      bgcolor="#df9222"
+      py={6}
+      display="flex"
+      flexDirection="column"
+      alignItems="center"
+    >
+      <Typography
+        variant="h4"
+        align="center"
+        sx={{ marginBottom: "20px", color: "white" }}
+      >
         Préstamos Personales desde $$x hasta $x
       </Typography>
-      <Typography variant="body2" align="center" sx={{ marginBottom: '20px', color: 'white' }}>
+      <Typography
+        variant="body2"
+        align="center"
+        sx={{ marginBottom: "20px", color: "white" }}
+      >
         Paga puntual tu préstamo y accede a montos mayores automáticamente
       </Typography>
-      <Button variant="contained" sx={{ backgroundColor: "#358930" }} onClick={handleOpenModal}>
-        Inicia tu solicitud 
+      <Button
+        variant="contained"
+        sx={{
+          backgroundColor: "#358930",
+          "&:hover": {
+            backgroundColor: "#00bb2d",
+            height: "42%",
+            width: "22%",
+          },
+        }}
+        onClick={handleOpenModal}
+      >
+        Inicia tu solicitud
       </Button>
       <Modal open={modalOpen} onClose={handleCloseModal}>
         <div className="modal-content">
-          <IconButton aria-label="Cerrar" onClick={handleCloseModal} sx={{ position: 'absolute', top: 0, right: 0 }}>
+          <IconButton
+            aria-label="Cerrar"
+            onClick={handleCloseModal}
+            sx={{ position: "absolute", top: 0, right: 0 }}
+          >
             <CloseIcon />
           </IconButton>
-          <Typography variant="h6" align="center" sx={{ marginBottom: '20px' }}>
-            Préstamos Personales desde $200 hasta $700 
+          <Typography variant="h6" align="center" sx={{ marginBottom: "20px" }}>
+            Préstamos Personales desde $200 hasta $700
           </Typography>
           <form onSubmit={handleSubmit}>
             <FormControlLabel
@@ -105,12 +135,40 @@ const PersonalLoansSection = () => {
               />
             )}
             <div className="form-row">
-              <TextField label="Apellido" name="apellido" value={formValues.apellido} onChange={handleInputChange} className="textfield" required />
-              <TextField label="DNI" name="dni" value={formValues.dni} onChange={handleInputChange} className="textfield" required />
+              <TextField
+                label="Apellido"
+                name="apellido"
+                value={formValues.apellido}
+                onChange={handleInputChange}
+                className="textfield"
+                required
+              />
+              <TextField
+                label="DNI"
+                name="dni"
+                value={formValues.dni}
+                onChange={handleInputChange}
+                className="textfield"
+                required
+              />
             </div>
             <div className="form-row">
-              <TextField label="Teléfono" name="telefono" value={formValues.telefono} onChange={handleInputChange} className="textfield" required />
-              <TextField label="Correo Electrónico" name="correo" value={formValues.correo} onChange={handleInputChange} className="textfield" required />
+              <TextField
+                label="Teléfono"
+                name="telefono"
+                value={formValues.telefono}
+                onChange={handleInputChange}
+                className="textfield"
+                required
+              />
+              <TextField
+                label="Correo Electrónico"
+                name="correo"
+                value={formValues.correo}
+                onChange={handleInputChange}
+                className="textfield"
+                required
+              />
             </div>
             <div className="form-row">
               <TextField
@@ -121,12 +179,23 @@ const PersonalLoansSection = () => {
                 className="textfield"
                 required
               />
-              <TextField label="Dirección" name="direccion" value={formValues.direccion} onChange={handleInputChange} className="textfield" required />
+              <TextField
+                label="Dirección"
+                name="direccion"
+                value={formValues.direccion}
+                onChange={handleInputChange}
+                className="textfield"
+                required
+              />
             </div>
             <div className="form-row">
               <FormControl className="textfield" required>
                 <InputLabel>Tipo de vivienda</InputLabel>
-                <Select name="tipoVivienda" value={formValues.tipoVivienda} onChange={handleInputChange}>
+                <Select
+                  name="tipoVivienda"
+                  value={formValues.tipoVivienda}
+                  onChange={handleInputChange}
+                >
                   <MenuItem value="propia">Propia</MenuItem>
                   <MenuItem value="alquilada">Alquilada</MenuItem>
                   <MenuItem value="familiar">Familiar</MenuItem>
@@ -143,24 +212,63 @@ const PersonalLoansSection = () => {
               />
             </div>
             <div className="form-row">
-              <TextField label="Departamento" name="departamento" value={formValues.departamento} onChange={handleInputChange} className="textfield" required />
-              <TextField label="Distrito" name="distrito" value={formValues.distrito} onChange={handleInputChange} className="textfield" required />
+              <TextField
+                label="Departamento"
+                name="departamento"
+                value={formValues.departamento}
+                onChange={handleInputChange}
+                className="textfield"
+                required
+              />
+              <TextField
+                label="Distrito"
+                name="distrito"
+                value={formValues.distrito}
+                onChange={handleInputChange}
+                className="textfield"
+                required
+              />
             </div>
             <div className="form-row">
               <FormControl className="textfield" required>
                 <InputLabel>Estado Civil</InputLabel>
-                <Select name="estadoCivil" value={formValues.estadoCivil} onChange={handleInputChange}>
+                <Select
+                  name="estadoCivil"
+                  value={formValues.estadoCivil}
+                  onChange={handleInputChange}
+                >
                   <MenuItem value="soltero">Soltero(a)</MenuItem>
                   <MenuItem value="casado">Casado(a)</MenuItem>
                   <MenuItem value="divorciado">Divorciado(a)</MenuItem>
                   <MenuItem value="viudo">Viudo(a)</MenuItem>
                 </Select>
               </FormControl>
-              <TextField label="Número de Hijos" name="hijos" value={formValues.hijos} onChange={handleInputChange} className="textfield" type="number" />
+              <TextField
+                label="Número de Hijos"
+                name="hijos"
+                value={formValues.hijos}
+                onChange={handleInputChange}
+                className="textfield"
+                type="number"
+              />
             </div>
             <div className="form-row">
-              <TextField label="Ocupación" name="ocupacion" value={formValues.ocupacion} onChange={handleInputChange} className="textfield" required />
-              <TextField label="Empresa donde labora" name="empresa" value={formValues.empresa} onChange={handleInputChange} className="textfield" required />
+              <TextField
+                label="Ocupación"
+                name="ocupacion"
+                value={formValues.ocupacion}
+                onChange={handleInputChange}
+                className="textfield"
+                required
+              />
+              <TextField
+                label="Empresa donde labora"
+                name="empresa"
+                value={formValues.empresa}
+                onChange={handleInputChange}
+                className="textfield"
+                required
+              />
             </div>
             <div className="form-row">
               <TextField
