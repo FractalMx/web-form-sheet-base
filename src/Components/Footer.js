@@ -10,7 +10,7 @@ function Copyright() {
     <Typography variant="body2" color="text.secondary" align="center">
       {'Todos los derechos reservados © '}
       <Link color="inherit" href="https://google.com/">
-       Nombre Empresa
+       Créditos Yadiel
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
@@ -22,7 +22,7 @@ function Footer(props) {
   const { description, title } = props;
 
   return (
-    <Box component="footer" sx={{ bgcolor: 'background.paper', py: 6 }}>
+    <Box component="footer" sx={{ bgcolor: '#df9222', py: 2 }}>
       
         <Typography variant="h6" align="center" gutterBottom>
           {title}

@@ -29,7 +29,7 @@ const Info = () => {
           backgroundSize: "cover",
           backgroundPosition: "center",
           width: "100%",
-          height: isDesktop ? "125vh" : "65vh", // Ajusta la altura según tus necesidades
+          height: isDesktop ? "100vh" : "60vh", // Ajusta la altura según tus necesidades
           position: "relative",
         }}
       ></div>
@@ -37,7 +37,7 @@ const Info = () => {
         style={{
           
           width: "100%",
-          marginTop:isDesktop ? -450: -200,
+          marginTop:isDesktop ? -300: -120,
         
         }}
       >
@@ -56,10 +56,10 @@ const Info = () => {
                 Creditos Yadiel PERU S.A.C Legalmente Constituida, en el año
                 2023.es una FINTECH DE PRESTAMOS que ofrece soluciones ágiles,
                 transparentes y a la medida para todo público con capitales 100%
-                Peruanos y registrada en la SBS ,solicita tu credito desde la
+                Peruanos y registrada en la SBS ,solicíta tu crédito desde la
                 comodidad de tu hogar nosotros nos encargamos del resto. Nuestra
-                mision es colaborar para lograr la inclusion financiera de mas
-                Peruanos Tenemos diferentes productos de acuerdo a tu nesecidad.
+                mision es colaborar para lograr la inclusion financiera de más
+                Peruanos Tenemos diferentes productos de acuerdo a tu necesidad.
               </Typography>
             </Box>
          
@@ -109,7 +109,7 @@ const Info = () => {
                 librerias,licorerias,bazares ,restaurantes etc etc y que
                 necesiten un prestamo para invertir o algun apuro ocacional y
                 poderlo pagar semanalmente con planes flexibles segun sus
-                nesecidades. Para acceder a este producto debes estar bien
+                necesidades. Para acceder a este producto debes estar bien
                 calificado en el sistema financiero
               </Typography>
             </Box>
@@ -200,65 +200,12 @@ const Info = () => {
                 infocorp también te damos la oportunidad de trabajar con
                 nosotros consulta cómo al interno.
               </Typography>
-              <Typography
-                textAlign="left"
-                sx={{
-                  color: "black",
-                  margin: isDesktop ? 2 : 1,
-
-                  fontSize: isDesktop ? 15 : 13,
-                }}
-              >
-                Si estás mal calificado en el sistema financiero e infocorp
-                también te damos un préstamo Producto diseñado para personas que
-                estan mal calificadas en el sistema financiero que tengan un
-                negocio actívo y cumplan con ciertos requisítos, si estás en
-                infocorp también te damos la oportunidad de trabajar con
-                nosotros consulta cómo al interno.
-              </Typography>
+              
             </Box>
          
         </Parallax>
 
-        <Parallax
-          animation={{ x: 0, opacity: 1, playScale: [0.1, 0.5] }}
-          style={{ transform: "translateX(-100px)", opacity: 0 }}
-          className="code-box-shape"
-        >
-         
-            <Box p={1} width="100%">
-              <Typography
-                textAlign="left"
-                sx={{
-                  color: "black",
-                  margin: isDesktop ? 2 : 1,
-                  marginTop: 3,
-                  fontWeight: "bold",
-                  fontSize: isDesktop ? 18 : 10,
-                }}
-              >
-                PRESTAMOS PARA MAL CALIFICADOS (INFOCORP)
-              </Typography>
-
-              <Typography
-                textAlign="left"
-                sx={{
-                  color: "black",
-                  margin: isDesktop ? 2 : 1,
-
-                  fontSize: isDesktop ? 15 : 13,
-                }}
-              >
-                Si estás mal calificado en el sistema financiero e infocorp
-                también te damos un préstamo Producto diseñado para personas que
-                estan mal calificadas en el sistema financiero que tengan un
-                negocio actívo y cumplan con ciertos requisítos, si estás en
-                infocorp también te damos la oportunidad de trabajar con
-                nosotros consulta cómo al interno.
-              </Typography>
-            </Box>
-         
-        </Parallax>
+        
 
         <Parallax
           animation={{ x: 0, opacity: 1, playScale: [0.1, 0.5] }}

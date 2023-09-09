@@ -6,6 +6,7 @@ import Grid from "@mui/material/Grid";
 import Link from "@mui/material/Link";
 import Box from "@mui/material/Box";
 import Info from "../../Components/Info";
+import Requisitos from "../../Components/Requisitos";
 import Info2 from "../../Components/Info2";
 import Info3 from "../../Components/Info3";
 import PrestamosPersonales from "../../Components/PrestamosPersonales";
@@ -17,10 +18,11 @@ function Main() {
   return (
     <Paper>
       <Info />
+      <Requisitos />
       <PrestamosPersonales />
       <PrestamosEmprendedor />
       <Info2 />
-      <Info3 />
+      {/* <Info3 /> */}
      
     </Paper>
   );

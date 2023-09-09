@@ -25,7 +25,8 @@ function MainLayout() {
       <Box>
         <Outlet />
       </Box>
-      <Footer description="Créditos Yadiel" title="Créditos Yadiel" />
+      <Footer description="Creditos Yadiel PERU S.A.C Legalmente Constituida, en el año
+                2023" title="Créditos Yadiel" />
       <Fab sx={{
           position: "fixed",
           zIndex: 9999,

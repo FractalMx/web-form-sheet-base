@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@mui/styles';
-import { Box, Typography, useMediaQuery, Paper, Button } from '@mui/material';
+import { Box, Typography, useMediaQuery, Paper, Button, Grid } from '@mui/material';
 import LockIcon from '@mui/icons-material/Lock';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
@@ -12,13 +12,14 @@ import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
-    flexDirection: 'column',
+    flexDirection: 'row',
     alignItems: 'center',
-    padding: '16px',
+    justifyContent: 'center',
+    padding: '5px',
     backgroundImage: `url(${backgroundYoungMan})`,
     backgroundSize: 'cover',
-
-    minHeight: '70vh',
+    height: '140vh',
+    minHeight: '140vh',
   },
   whatsApp: {
     display: 'flex',
@@ -29,12 +30,16 @@ const useStyles = makeStyles((theme) => ({
   },
   floatingContainer: {
     backgroundColor: 'rgba(255, 255, 255, 0.8)',
-    padding: '16px',
+    padding: '8px',
     borderRadius: 20,
-    margin: '16px 0',
-    textAlign: 'center',
-    width: '60%',
-    maxWidth: 300,
+    margin: '16px',
+    marginTop: '90%',
+    justifyContent: 'center',
+    flexDirection: 'column',
+    width: '99%',
+    display: 'flex',
+
+    maxWidth: '99%',
   },
   floatingContainerWS: {
     backgroundColor: 'rgba(255, 255, 255, 0.8)',
@@ -47,18 +52,20 @@ const useStyles = makeStyles((theme) => ({
   },
   textVertical: {
     display: 'flex',
-    flexDirection: 'column',
+    flexDirection: 'row',
+    alignContent: 'center',
     alignItems: 'center',
+    justifyContent: 'space-between'
   },
   title: {
-    fontSize: '0.9rem',
+    fontSize: '0.3rem',
     fontWeight: 'bold',
     marginBottom: '8px',
     padding: '2px'
   },
   text: {
-    fontSize: '0.5rem',
-
+    fontSize: '0.4rem',
+    padding: '2px'
   },
   textWS: {
     fontSize: '1.2rem',
@@ -72,7 +79,7 @@ const useStyles = makeStyles((theme) => ({
 
   button: {
     display: 'flex',
-    width: "20%",
+    width: "100%",
     height: "40%",
     alignItems: 'center',
     justifyContent: 'center',
@@ -86,6 +93,8 @@ const useStyles = makeStyles((theme) => ({
   '@media (min-width: 900px)': {
     root: {
       flexDirection: 'row',
+      height: '70vh',
+      minHeight: '70vh',
       justifyContent: 'flex-end',
       alignItems: 'center',
       padding: '32px', // Ajustar el espaciado aquí
@@ -97,23 +106,35 @@ const useStyles = makeStyles((theme) => ({
       padding: '32px', // Ajustar el espaciado aquí
     },
     floatingContainer: {
-      margin: '0 16px', // Ajustar el espaciado aquí
+      margin: '16px', // Ajustar el espaciado aquí
       maxWidth: 'none',
-      flexDirection: 'row',
+      flexDirection: 'column',
+      width: '60%',
+      display: 'flex',
+
+
+      marginTop: '0%',
+    },
+    button: {
+
+      width: "20%",
+
+
     },
     textVertical: {
+      display: 'flex',
       alignItems: 'center',
       flexDirection: 'row',
+
     },
     textContainer: {
       margin: '0 16px',
     },
     title: {
-      fontSize: '1.1rem',
-      fontWeight: 'bold',
+
       marginBottom: '8px',
 
-      padding: '9px'
+      padding: '5px'
     },
     text: {
       fontSize: '0.6rem',
@@ -131,6 +152,7 @@ const useStyles = makeStyles((theme) => ({
     }
   },
 }));
+
 
 const ComoPagar = () => {
   const classes = useStyles();
@@ -162,11 +184,11 @@ const ComoPagar = () => {
           <Typography sx={{ color: '#b16b04', fontSize: isDesktop ? 45 : 32 }}>
             ¿Cómo pagar?
           </Typography>
-          
+
         </Box>
 
-        <Box display="flex" width="60%"mt={1}  justifyContent="center" alignItems="center" sx={{ zIndex: 9999 }}>
-          
+        <Box display="flex" width="60%" mt={1} justifyContent="center" alignItems="center" sx={{ zIndex: 9999 }}>
+
           <Typography ml={4} sx={{ color: 'white', fontWeight: 'bold', fontSize: isDesktop ? 48 : 35 }}>
             Paga tu préstamo con total tranquilidad desde tu celular
           </Typography>
@@ -189,34 +211,45 @@ const ComoPagar = () => {
 
 
       </Box>
-      <div className={classes.root}>
+      <Box className={classes.root}>
         <Paper elevation={3} className={classes.floatingContainer}>
-          <div className={classes.textVertical}>
-            <LockIcon className={classes.icon} />
-            <Typography variant="h5" className={classes.title}>Seguro</Typography>
-
-            <Typography className={classes.text}>Contamos con un equipo para darte un respaldo</Typography>
-          </div>
-          <div className={classes.textVertical}>
-            <AccessTimeIcon className={classes.icon} />
-            <Typography variant="h5" className={classes.title}>Rápido</Typography>
-
-            <Typography className={classes.text}>Nuestros asesores están disponibles de lunes a sábados para darte el mejor servicio</Typography>
-          </div>
-          <div className={classes.textVertical}>
-            <AccountBalanceIcon className={classes.icon} />
-            <Typography variant="h5" className={classes.title}>Transferencia bancario</Typography>
-
-            <Typography className={classes.text}>Todo préstamo con nuestros clientes es bancarizado</Typography>
-          </div>
-          <div className={classes.textVertical}>
-            <CreditCardIcon className={classes.icon} />
-            <Typography variant="h6" className={classes.title}>Sencilla forma de pago</Typography>
-
-            <Typography className={classes.text}>Todo lo puedes hacer desde tu celular</Typography>
-          </div>
+          <Grid container spacing={2}>
+            <Grid item xs={12} md={3} className={classes.featureContainer}>
+              <LockIcon className={classes.featureIcon} />
+              <Typography className={classes.featureTitle}>Seguro</Typography>
+              <Typography className={classes.featureText}>
+                Contamos con un equipo para darte un respaldo.
+              </Typography>
+            </Grid>
+            <Grid item xs={12} md={3} className={classes.featureContainer}>
+              <AccessTimeIcon className={classes.featureIcon} />
+              <Typography className={classes.featureTitle}>Rápido</Typography>
+              <Typography className={classes.featureText}>
+                Nuestros asesores están disponibles de lunes a sábados para darte
+                el mejor servicio.
+              </Typography>
+            </Grid>
+            <Grid item xs={12} md={3} className={classes.featureContainer}>
+              <AccountBalanceIcon className={classes.featureIcon} />
+              <Typography className={classes.featureTitle}>
+                Transferencia bancario
+              </Typography>
+              <Typography className={classes.featureText}>
+                Todo préstamo con nuestros clientes es bancarizado.
+              </Typography>
+            </Grid>
+            <Grid item xs={12} md={3} className={classes.featureContainer}>
+              <CreditCardIcon className={classes.featureIcon} />
+              <Typography className={classes.featureTitle}>
+                Sencilla forma de pago
+              </Typography>
+              <Typography className={classes.featureText}>
+                Todo lo puedes hacer desde tu celular.
+              </Typography>
+            </Grid>
+          </Grid>
         </Paper>
-      </div>
+      </Box>
 
       <Box className={classes.whatsApp} maxWidth="100%"
 
@@ -231,18 +264,14 @@ const ComoPagar = () => {
           backgroundColor: "#358930", '&:hover': {
             backgroundColor: "#00bb2d",
             height: "42%",
-            width: "22%",
+            width: "100%",
           }
         }} className={classes.button} href="https://wa.me/numero-de-tu-contacto">
           <WhatsAppIcon />
           <span className={classes.buttonText}>WhatsApp</span>
         </Button>
-
-
       </Box>
-
-
-    </Box>
+    </Box >
   );
 
 };

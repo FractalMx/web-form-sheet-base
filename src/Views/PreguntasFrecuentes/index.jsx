@@ -59,11 +59,11 @@ const PreguntasFrecuentes = () => {
                 maxWidth="100%"
                 height={isDesktop ? 200 : 280}
                 width="100%"
-                bgcolor="#4caf50"
+                bgcolor="#114d09"
                 justifyContent="center"
 
             >
-                <Typography sx={{ color: 'black', fontSize: isDesktop ? 38 : 25 }}>
+                <Typography sx={{ color: 'white', fontSize: isDesktop ? 38 : 25 }}>
                     Preguntas frecuentes
                 </Typography>
             </Box>
