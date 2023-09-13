@@ -1,26 +1,28 @@
 import * as React from "react";
 import PropTypes from "prop-types";
 import Paper from "@mui/material/Paper";
-import Typography from "@mui/material/Typography";
-import Grid from "@mui/material/Grid";
-import Link from "@mui/material/Link";
-import Box from "@mui/material/Box";
+import Snackbar from "@mui/material/Typography";
+import Alert from '@mui/material/Alert';
 import Info from "../../Components/Info";
 import Requisitos from "../../Components/Requisitos";
 import Info2 from "../../Components/Info2";
-import Info3 from "../../Components/Info3";
+//import Info3 from "../../Components/Info3";
 import PrestamosPersonales from "../../Components/PrestamosPersonales";
 import PrestamosEmprendedor from "../../Components/PrestamosEmprendedor";
-
+import PrestamosMalCalificado from "../../Components/PrestamosMalCalificado";
+import SnackBarMessages from "../../Components/SnackBarMessages";
 function Main() {
-
+  const [alert, setAlert] = React.useState({ message: "", status: "", open: false })
   
+ 
   return (
     <Paper>
+      <SnackBarMessages alert={alert} setAlert={setAlert} />
       <Info />
       <Requisitos />
-      <PrestamosPersonales />
-      <PrestamosEmprendedor />
+      <PrestamosPersonales setAlert={setAlert} />
+      <PrestamosEmprendedor setAlert={setAlert}  />
+      <PrestamosMalCalificado setAlert={setAlert}  />
       <Info2 />
       {/* <Info3 /> */}
      

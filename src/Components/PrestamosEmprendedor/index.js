@@ -10,18 +10,21 @@ import {
   MenuItem,
   FormControl,
   InputLabel,
-  FormHelperText,
+  CircularProgress,
   Checkbox,
   FormControlLabel,
 } from "@mui/material";
+import axios from "axios";
 import CloseIcon from "@mui/icons-material/Close";
 import "./PrestamosEmprendedor.css"; // Asegúrate de tener el archivo CSS
 import { Parallax } from "rc-scroll-anim";
 const PersonalLoansSection = () => {
   const [modalOpen, setModalOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [alert, setAlert] = useState({ message: "", status: "", open: false });
   const [formValues, setFormValues] = useState({
-    tieneNegocio: false,
-    nombreNegocio: "",
+    tipoSolicitud: "PRESTANEGOCIOS",
+    nombre: "",
     apellido: "",
     dni: "",
     telefono: "",
@@ -57,10 +60,38 @@ const PersonalLoansSection = () => {
     setModalOpen(false);
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     // Validar campos y enviar solicitud aquí
-    console.log(formValues);
+    setIsLoading(true);
+
+    const formData = new FormData(event.currentTarget);
+
+    const data = {...Object.fromEntries(formData.entries()),tipoSolicitud:formValues.tipoSolicitud };
+
+    await axios({
+      method: "POST",
+      url: process.env.REACT_APP_GOOGLE_SCRIPT_ONE,
+      headers: { "Content-Type": "multipart/form-data" },
+      data: data,
+    })
+      .then((response) => {
+        setAlert(
+          { 
+            message: "Su solicitud fué realizada con éxito.", 
+            status: "success", 
+            open: true 
+          }
+        );
+        handleCloseModal();
+      })
+      .catch((error) => {
+        setAlert({ message: "Al parecer ocurrió un error. Su solicitud no se realizó, inténtelo de nuevo.", status: "error", open: true });
+        setIsLoading(false);
+        return;
+      });
+
+    setIsLoading(false);
   };
 
   return (
@@ -70,7 +101,7 @@ const PersonalLoansSection = () => {
       className="code-box-shape"
     >
       <Box
-      id="solicitar"
+        id="solicitar"
         className="personal-loans-section"
         bgcolor="#df9222"
         py={6}
@@ -83,7 +114,7 @@ const PersonalLoansSection = () => {
           align="center"
           sx={{ marginBottom: "20px", color: "white" }}
         >
-          Préstamos Personales desde $$x hasta $x
+          PRESTANEGOCIOS
         </Typography>
         <Typography
           variant="body2"
@@ -120,7 +151,7 @@ const PersonalLoansSection = () => {
               align="center"
               sx={{ marginBottom: "20px" }}
             >
-              Préstamos Personales desde $200 hasta $700
+              PrestaNegocios
             </Typography>
             <form onSubmit={handleSubmit}>
               <FormControlLabel
@@ -141,10 +172,20 @@ const PersonalLoansSection = () => {
                   value={formValues.nombreNegocio}
                   onChange={handleInputChange}
                   fullWidth
+                  
+                  sx={{marginBottom:2}}
                   required
                 />
               )}
               <div className="form-row">
+                <TextField
+                  label="Nombre"
+                  name="nombre"
+                  value={formValues.nombre}
+                  onChange={handleInputChange}
+                  className="textfield"
+                  required
+                />
                 <TextField
                   label="Apellido"
                   name="apellido"
@@ -153,6 +194,8 @@ const PersonalLoansSection = () => {
                   className="textfield"
                   required
                 />
+              </div>
+              <div className="form-row">
                 <TextField
                   label="DNI"
                   name="dni"
@@ -161,8 +204,6 @@ const PersonalLoansSection = () => {
                   className="textfield"
                   required
                 />
-              </div>
-              <div className="form-row">
                 <TextField
                   label="Teléfono"
                   name="telefono"
@@ -171,6 +212,8 @@ const PersonalLoansSection = () => {
                   className="textfield"
                   required
                 />
+              </div>
+              <div className="form-row">
                 <TextField
                   label="Correo Electrónico"
                   name="correo"
@@ -179,8 +222,6 @@ const PersonalLoansSection = () => {
                   className="textfield"
                   required
                 />
-              </div>
-              <div className="form-row">
                 <TextField
                   label="Teléfono Personal"
                   name="telefonoPersonal"
@@ -189,6 +230,8 @@ const PersonalLoansSection = () => {
                   className="textfield"
                   required
                 />
+              </div>
+              <div className="form-row">
                 <TextField
                   label="Dirección"
                   name="direccion"
@@ -197,8 +240,6 @@ const PersonalLoansSection = () => {
                   className="textfield"
                   required
                 />
-              </div>
-              <div className="form-row">
                 <FormControl className="textfield" required>
                   <InputLabel>Tipo de vivienda</InputLabel>
                   <Select
@@ -211,6 +252,8 @@ const PersonalLoansSection = () => {
                     <MenuItem value="familiar">Familiar</MenuItem>
                   </Select>
                 </FormControl>
+              </div>
+              <div className="form-row">
                 <TextField
                   label="Cuantas Personas Viven contigo"
                   name="personasContigo"
@@ -220,8 +263,6 @@ const PersonalLoansSection = () => {
                   required
                   type="number"
                 />
-              </div>
-              <div className="form-row">
                 <TextField
                   label="Departamento"
                   name="departamento"
@@ -230,6 +271,8 @@ const PersonalLoansSection = () => {
                   className="textfield"
                   required
                 />
+              </div>
+              <div className="form-row">
                 <TextField
                   label="Distrito"
                   name="distrito"
@@ -238,8 +281,6 @@ const PersonalLoansSection = () => {
                   className="textfield"
                   required
                 />
-              </div>
-              <div className="form-row">
                 <FormControl className="textfield" required>
                   <InputLabel>Estado Civil</InputLabel>
                   <Select
@@ -253,6 +294,8 @@ const PersonalLoansSection = () => {
                     <MenuItem value="viudo">Viudo(a)</MenuItem>
                   </Select>
                 </FormControl>
+              </div>
+              <div className="form-row">
                 <TextField
                   label="Número de Hijos"
                   name="hijos"
@@ -261,8 +304,6 @@ const PersonalLoansSection = () => {
                   className="textfield"
                   type="number"
                 />
-              </div>
-              <div className="form-row">
                 <TextField
                   label="Ocupación"
                   name="ocupacion"
@@ -271,6 +312,8 @@ const PersonalLoansSection = () => {
                   className="textfield"
                   required
                 />
+              </div>
+              <div className="form-row">
                 <TextField
                   label="Empresa donde labora"
                   name="empresa"
@@ -279,8 +322,6 @@ const PersonalLoansSection = () => {
                   className="textfield"
                   required
                 />
-              </div>
-              <div className="form-row">
                 <TextField
                   label="Ingresos Mensuales"
                   name="ingresosMensuales"
@@ -290,6 +331,8 @@ const PersonalLoansSection = () => {
                   required
                   type="number"
                 />
+              </div>
+              <div className="form-row">
                 <TextField
                   label="Otros Ingresos"
                   name="otrosIngresos"
@@ -299,8 +342,6 @@ const PersonalLoansSection = () => {
                   required
                   type="number"
                 />
-              </div>
-              <div className="form-row">
                 <TextField
                   label="Monto a pedir"
                   name="montoPedido"
@@ -310,6 +351,8 @@ const PersonalLoansSection = () => {
                   required
                   type="number"
                 />
+              </div>
+              <div className="form-row">
                 <TextField
                   label="Número de Cuotas"
                   name="cuotas"
@@ -319,8 +362,6 @@ const PersonalLoansSection = () => {
                   required
                   type="number"
                 />
-              </div>
-              <div className="form-row">
                 <TextField
                   label="Ingresa Código de invitación"
                   name="codigoInvitacion"
@@ -335,8 +376,15 @@ const PersonalLoansSection = () => {
                 variant="contained"
                 color="primary"
                 fullWidth
+                disabled={isLoading}
               >
-                Enviar Solicitud
+                {isLoading ? (
+                  // Si isLoading es true, muestra el indicador de carga
+                  <CircularProgress size={24} color="primary" />
+                ) : (
+                  // Si isLoading es false, muestra "Enviar Solicitud"
+                  "Enviar Solicitud"
+                )}
               </Button>
             </form>
           </div>

@@ -13,16 +13,15 @@ import {
   FormHelperText,
   CircularProgress
 } from "@mui/material";
-import axios from "axios";
-import "./PrestamosPersonales.css"; // Asegúrate de tener el archivo CSS
+import "./PrestamosMalCalificado.css"; // Asegúrate de tener el archivo CSS
 import CloseIcon from "@mui/icons-material/Close";
 import { Parallax } from "rc-scroll-anim";
-const PrestamosPersonales = ({ setAlert }) => {
+import axios from "axios";
+const PrestamosMalCalificado = ({setAlert}) => {
   const [modalOpen, setModalOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  
   const [formValues, setFormValues] = useState({
-    tipoSolicitud: "PRESTAPRENDA",
+    tipoSolicitud: "PRESTAMOSMALCALIFICADOS",
     nombre: "",
     apellido: "",
     dni: "",
@@ -85,7 +84,7 @@ const PrestamosPersonales = ({ setAlert }) => {
         handleCloseModal();
       })
       .catch((error) => {
-        
+       
         setAlert({ message: "Al parecer ocurrió un error. Su solicitud no se realizó, inténtelo de nuevo.", status: "error", open: true });
         setIsLoading(false);
         return;
@@ -110,7 +109,7 @@ const PrestamosPersonales = ({ setAlert }) => {
         alignItems="center"
       >
         <Typography variant="h4" align="center" sx={{ marginBottom: "20px" }}>
-        PRESTAPRENDA
+        PRESTAMOS PARA MAL CALIFICADOS (INFOCORP)
         </Typography>
         <Typography
           variant="body2"
@@ -147,7 +146,7 @@ const PrestamosPersonales = ({ setAlert }) => {
               align="center"
               sx={{ marginBottom: "20px" }}
             >
-              Presta Prenda
+              PRESTAMOS PARA MAL CALIFICADOS (INFOCORP)
             </Typography>
 
             <form onSubmit={handleSubmit}>
@@ -378,4 +377,4 @@ const PrestamosPersonales = ({ setAlert }) => {
   );
 };
 
-export default PrestamosPersonales;
+export default PrestamosMalCalificado;
