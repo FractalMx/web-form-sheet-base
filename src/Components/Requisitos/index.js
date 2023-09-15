@@ -68,11 +68,13 @@ const Requisitos = () => {
               <Typography variant="h5">
                 PRESTAMOS PARA MAL CALIFICADOS (INFOCORP)
               </Typography>
+              <ul className={classes.list}>
               <li>Negocio en funcionamiento</li>
                 <li>Debes tener DNI</li>
                 <li>Recibo de servicio a tu nombre</li>
                 <li>Cuenta bancaria o aplicativos</li>
                 <li>Casa propia o aval</li>
+              </ul>
             </Box>
           </Grid>
         </Grid>

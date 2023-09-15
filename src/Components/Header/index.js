@@ -53,7 +53,7 @@ const Header = () => {
             <div className="contact-info-nodesktop">
               <Email />
               <Typography variant="body2" color="#104409">
-                ejemplo@email.com
+              creditosyadelcontacto@creditosyadel.com
               </Typography>
             </div>
             <div className="contact-info-nodesktop">
