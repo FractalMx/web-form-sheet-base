@@ -87,6 +87,7 @@ const useStyles = makeStyles((theme) => ({
         
       width: "70%",
     },
+    margin:2,
     color: "#358930",
 
   },
@@ -143,8 +144,8 @@ const useStyles = makeStyles((theme) => ({
       '&:hover': {
         
         width: "30%",
-      }
-
+      },
+     margin:2, 
     },
     button2: {
 
@@ -321,15 +322,25 @@ const ComoPagar = () => {
         <Typography variant="h6" className={classes.textWS}>
           Si tienes dudas comunicate con un asesor haciendo click aquí:
         </Typography>
-
-        <Button variant="contained" sx={{
+       
+              
+        <Button variant="contained" sx={{marginTop:1,
           backgroundColor: "#358930", '&:hover': {
             backgroundColor: "#00bb2d",
            
           }
-        }} className={classes.button} href="https://wa.me/924174718">
+        }} className={classes.button}   href="https://wa.me/952107959">
           <WhatsAppIcon />
-          <span className={classes.buttonText}>WhatsApp</span>
+          <span className={classes.buttonText}>Ricardo +51 952-107-959</span>
+        </Button>
+        <Button variant="contained" sx={{marginTop:1,
+          backgroundColor: "#358930", '&:hover': {
+            backgroundColor: "#00bb2d",
+           
+          }
+        }} className={classes.button}   href="https://wa.me/923824245">
+          <WhatsAppIcon />
+          <span className={classes.buttonText}>Kelly +51 923-824-245</span>
         </Button>
       </Box>
       <Box className={classes.whatsApp} maxWidth="100%"

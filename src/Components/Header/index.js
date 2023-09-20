@@ -59,7 +59,7 @@ const Header = () => {
             <div className="contact-info-nodesktop">
               <Phone />
               <Typography variant="body2" color="#104409">
-                (123) 456-7890
+                (923) 824-245
               </Typography>
             </div>
           </div>
@@ -82,7 +82,8 @@ const Header = () => {
               <div className="contact-info">
                 <Phone />
                 <Typography variant="body2" color="#e46721">
-                  (123) 456-7890
+                
+                  (923) 824-245
                 </Typography>
               </div>
             </div>

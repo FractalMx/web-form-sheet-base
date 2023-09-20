@@ -105,9 +105,10 @@ const LoanRequirementsSection = () => {
               </Typography>
               <Button
                 variant="contained"
-                color="success"
+                color="success" 
                 sx={{ ml: 1, m:1,   width:(isDesktop) ? "35%":"90%" }}
                 startIcon={<CallIcon />}
+                href="https://wa.me/952107959"
               >
                 Ricardo +51 952-107-959
               </Button>
@@ -116,6 +117,7 @@ const LoanRequirementsSection = () => {
                 color="success"
                 sx={{  width:(isDesktop) ? "35%":"90%" }}
                 startIcon={<CallIcon />}
+                href="https://wa.me/923824245"
               >
                 Kelly +51 923-824-245
               </Button>
