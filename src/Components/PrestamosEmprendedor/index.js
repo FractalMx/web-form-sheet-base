@@ -150,16 +150,18 @@ const EmprendedorLoansSection = () => {
         display="flex"
         flexDirection="column"
         alignItems="center"
+        mt={0.5}
+        
       >
         <Typography
-          variant="h4"
+          variant="h5"
           align="center"
           style={{ marginBottom: "20px", color: "white" }}
         >
           PRESTANEGOCIOS
         </Typography>
         <Typography
-          variant="body2"
+          variant="body1"
           align="center"
           style={{ marginBottom: "20px", color: "white" }}
         >
@@ -459,7 +461,7 @@ const EmprendedorLoansSection = () => {
                 {isLoading ? (
                   <CircularProgress size={24} color="primary" />
                 ) : (
-                  "Enviar Solicitud"
+                  "Solicitar crédito"
                 )}
               </Button>
             </form>

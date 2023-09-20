@@ -12,16 +12,20 @@ const useStyles = makeStyles((theme) => ({
     alignContent: "center",
   },
   rectangle: {
-    width: "100%",
-    height: "180px",
+    marginTop: 10,
+
+    width: "80%",
+    height: "200px",
+
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
+    alignSelf: "center",
   },
   list: {
-    listStyleType: 'disc',
-    paddingLeft: '20px',
+    listStyleType: "disc",
+    paddingLeft: "20px",
     marginTop: 1,
   },
 }));
@@ -37,8 +41,15 @@ const Requisitos = () => {
     >
       <Box className={classes.container}>
         <Typography variant="h3">Requisitos</Typography>
-        <Grid container spacing={3} display="flex" justifyContent="center">
-          <Grid item xs={12} md={6}>
+        <Grid container spacing={3}>
+          <Grid
+            item
+            xs={12}
+            md={6}
+            display="flex"
+            justifyContent="center"
+            alignItems="center"
+          >
             <Box className={classes.rectangle}>
               <Typography variant="h5">PRESTANEGOCIOS</Typography>
               <ul className={classes.list}>
@@ -50,26 +61,45 @@ const Requisitos = () => {
               </ul>
             </Box>
           </Grid>
-           
-          <Grid item xs={12} md={6}>
+
+          <Grid
+            item
+            xs={12}
+            md={6}
+            display="flex"
+            justifyContent="center"
+            alignItems="center"
+          >
             <Box className={classes.rectangle}>
-              <Typography variant="h5">PRESTAPRENDA </Typography>
+              <Typography variant="h5">PRESTAPRENDA</Typography>
               <ul className={classes.list}>
                 <li>Prenda con boleta de compra o factura </li>
-                <li>De no tener comprobante deberá firmar una declaración jurada para más seguridad</li>
-                <li>Los artículos deben estar en buenas condiciones nuevos o seminuevos</li>
-                
+                <li>
+                  De no tener comprobante deberá firmar una declaración jurada
+                  para más seguridad
+                </li>
+                <li>
+                  Los artículos deben estar en buenas condiciones nuevos o
+                  seminuevos
+                </li>
               </ul>
             </Box>
           </Grid>
-          
-          <Grid item xs={12} md={6}>
+
+          <Grid
+            item
+            xs={12}
+            md={6}
+            display="flex"
+            justifyContent="center"
+            alignItems="center"
+          >
             <Box className={classes.rectangle}>
-              <Typography variant="h5">
+              <Typography variant="h6">
                 PRESTAMOS PARA MAL CALIFICADOS (INFOCORP)
               </Typography>
               <ul className={classes.list}>
-              <li>Negocio en funcionamiento</li>
+                <li>Negocio en funcionamiento</li>
                 <li>Debes tener DNI</li>
                 <li>Recibo de servicio a tu nombre</li>
                 <li>Cuenta bancaria o aplicativos</li>

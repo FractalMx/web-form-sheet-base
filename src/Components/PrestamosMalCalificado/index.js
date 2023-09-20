@@ -145,12 +145,14 @@ const PrestamosMalCalificado = ({ setAlert }) => {
         display="flex"
         flexDirection="column"
         alignItems="center"
+        mt={0.5}
+       
       >
         <Typography variant="h4" align="center" sx={{ marginBottom: "20px" }}>
           PRESTAMOS PARA MAL CALIFICADOS (INFOCORP)
         </Typography>
         <Typography
-          variant="body2"
+          variant="body1"
           align="center"
           sx={{ marginBottom: "20px" }}
         >
@@ -424,7 +426,7 @@ const PrestamosMalCalificado = ({ setAlert }) => {
                 {isLoading ? (
                   <CircularProgress size={24} color="primary" />
                 ) : (
-                  "Enviar Solicitud"
+                  "Solicitar crédito"
                 )}
               </Button>
             </form>

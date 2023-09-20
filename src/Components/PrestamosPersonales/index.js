@@ -141,30 +141,34 @@ const PrestamosPersonales = ({ setAlert }) => {
     >
       <Box
         className="personal-loans-section"
-        bgcolor="#e4a276"
+        bgcolor="#358930"
         py={6}
         display="flex"
         flexDirection="column"
         alignItems="center"
+        mt={0.5}
+        
       >
-        <Typography variant="h4" align="center" sx={{ marginBottom: "20px" }}>
+        <Typography variant="h5" align="center" sx={{ marginBottom: "20px", color:"#df9222" }}>
           PRESTAPRENDA
         </Typography>
         <Typography
-          variant="body2"
+          variant="body1"
           align="center"
-          sx={{ marginBottom: "20px" }}
+          sx={{ marginBottom: "20px", color:"white" }}
         >
           Paga puntual tu préstamo y accede a montos mayores automáticamente
         </Typography>
         <Button
           variant="contained"
           sx={{
-            backgroundColor: "#358930",
+            backgroundColor: "white",
+            color:"#df9222",
             "&:hover": {
-              backgroundColor: "#00bb2d",
+              backgroundColor: "white",
               height: "42%",
-              width: "22%",
+              width: "22%"
+              
             },
           }}
           onClick={handleOpenModal}
@@ -426,7 +430,7 @@ const PrestamosPersonales = ({ setAlert }) => {
                 {isLoading ? (
                   <CircularProgress size={24} color="primary" />
                 ) : (
-                  "Enviar Solicitud"
+                  "Solicitar crédito"
                 )}
               </Button>
             </form>

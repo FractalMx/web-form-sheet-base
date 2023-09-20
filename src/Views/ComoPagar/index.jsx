@@ -18,8 +18,8 @@ const useStyles = makeStyles((theme) => ({
     padding: '5px',
     backgroundImage: `url(${backgroundYoungMan})`,
     backgroundSize: 'cover',
-    height: '140vh',
-    minHeight: '140vh',
+    height: '170vh',
+    minHeight: '170vh',
   },
   whatsApp: {
     display: 'flex',
@@ -79,17 +79,39 @@ const useStyles = makeStyles((theme) => ({
 
   button: {
     display: 'flex',
-    width: "100%",
+    width: "70%",
+    height: "60%",
+    alignItems: 'center',
+    justifyContent: 'center',
+    '&:hover': {
+        
+      width: "70%",
+    },
+    color: "#358930",
+
+  },
+  button2: {
+    display: 'flex',
+    width: "70%",
     height: "40%",
     alignItems: 'center',
     justifyContent: 'center',
 
     color: "white",
-
+    '&:hover': {
+      backgroundColor: "white",
+      height: "40%",
+      width: "70%",
+    }
   },
   buttonText: {
     marginLeft: '8px',
   },
+  buttonText2: {
+    marginLeft: '8px',
+    color: "#358930"
+  },
+ 
   '@media (min-width: 900px)': {
     root: {
       flexDirection: 'row',
@@ -117,8 +139,21 @@ const useStyles = makeStyles((theme) => ({
     },
     button: {
 
-      width: "20%",
+      width: "30%",
+      '&:hover': {
+        
+        width: "30%",
+      }
 
+    },
+    button2: {
+
+      width: "30%",
+      '&:hover': {
+        backgroundColor: "white",
+        height: "42%",
+        width: "30%",
+      }
 
     },
     textVertical: {
@@ -153,6 +188,12 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+const bankImages = [
+  { name: 'BCP', url: 'https://conference.chamilo.org/2023/en/wp-content/uploads/2016/08/logo_1_b-768x357.jpg' },
+  { name: 'BBVA', url: 'https://www.bbva.com/wp-content/uploads/2019/04/Logo-BBVA-1920x1080.jpg' },
+  { name: 'Interbank', url: 'https://www.limaeasy.com/media/reviews/photos/thumbnail/1500x500s/19/7f/57/interbank-peru-95-1621146444.jpg' },
+  { name: 'Scotiabank', url: 'https://cotizator.com/wp-content/uploads/2020/07/Screenshot-2019-02-21-22.34.09-1-300x169.png' },
+];
 
 const ComoPagar = () => {
   const classes = useStyles();
@@ -180,7 +221,7 @@ const ComoPagar = () => {
 
         }}
       >
-        <Box display="flex" width="80%" m={5} sx={{ zIndex: 9999 }}>
+        <Box display="flex" width="80%" m={5} >
           <Typography sx={{ color: '#b16b04', fontSize: isDesktop ? 45 : 32 }}>
             ¿Cómo pagar?
           </Typography>
@@ -250,26 +291,71 @@ const ComoPagar = () => {
           </Grid>
         </Paper>
       </Box>
-
+      <Box sx={{m:4,display:"flex", justifyContent:"center", flexDirection:"column" }}>
+      
+      <Typography variant="h6" gutterBottom align="center"mb={5}>
+      Ahora puedes pagar tu préstamo en las siguientes entidades bancarias, que no se te pase la fecha de vencimiento de tus cuotas. 
+      <b>¡Evita los intereses y penalidades!</b>
+      </Typography>
+      <Grid container spacing={2}>
+        {bankImages.map((bank, index) => (
+          <Grid item key={index} xs={6} sm={3}>
+            <Box elevation={1}>
+              <img
+                src={bank.url}
+                alt={bank.name}
+                style={{ width: '100%', height: 'auto' }}
+              />
+            </Box>
+          </Grid>
+        ))}
+      </Grid>
+        
+      </Box>
+      
       <Box className={classes.whatsApp} maxWidth="100%"
 
         width="100%"
         display="flex"
         justifyContent="center">
         <Typography variant="h6" className={classes.textWS}>
-          Si tienes dudas puedes comunicarte con nosotros haciendo click aquí:
+          Si tienes dudas comunicate con un asesor haciendo click aquí:
         </Typography>
 
         <Button variant="contained" sx={{
           backgroundColor: "#358930", '&:hover': {
             backgroundColor: "#00bb2d",
-            height: "42%",
-            width: "100%",
+           
           }
-        }} className={classes.button} href="https://wa.me/numero-de-tu-contacto">
+        }} className={classes.button} href="https://wa.me/924174718">
           <WhatsAppIcon />
           <span className={classes.buttonText}>WhatsApp</span>
         </Button>
+      </Box>
+      <Box className={classes.whatsApp} maxWidth="100%"
+        width="100%"
+        display="flex"
+        mt={5}
+        justifyContent="center">
+        <Typography variant="h4" align="center" className={classes.textWS}>
+          <b>¿Dónde enviar mi recibo de pago?</b>
+        </Typography>
+        <Typography variant="body1" align="center" m={2} className={classes.textWS}>
+          Luego de realizar tu pago envía tu recibo de consignación al siguiente número:
+        </Typography>  
+        <Button variant="contained" sx={{
+          backgroundColor: "white", '&:hover': {
+            backgroundColor: "white",
+           
+          }
+          
+        }} className={classes.button2} href="https://wa.me/924174718">
+          <WhatsAppIcon style={{color: "#358930"}} />
+          <span className={classes.buttonText2}>Canal de cobranza</span>
+        </Button>
+        <Typography variant="body2" align="center" m={2} style={{marginTop:10}}>
+          Horario de atención: lunes a sábados de 9:00 a.m. a 6:00 p.m.
+        </Typography>
       </Box>
     </Box >
   );

@@ -14,16 +14,8 @@ const StyledContainer = styled(Container)({
 const Info = () => {
   const isDesktop = useMediaQuery("(min-width: 1024px)");
   return (
-    <Box 
-    maxWidth="100%"
-    
-    width="100%"
-   
-    justifyContent="center"
-    
-  >
-     
-     <div
+    <Box maxWidth="100%" width="100%" justifyContent="center">
+      <div
         style={{
           backgroundImage: `url(${background1})`, // Reemplaza con la URL de tu imagen de fondo
           backgroundSize: "cover",
@@ -35,43 +27,39 @@ const Info = () => {
       ></div>
       <div
         style={{
-          
           width: "100%",
-          marginTop:isDesktop ? -300: -120,
-        
+          marginTop: isDesktop ? -300 : -120,
         }}
       >
-        <Container sx={{ width: "100%", backgroundColor:"white" }}>
-        <Parallax
-          animation={{ x: 0, opacity: 1, playScale: [0.1, 0.5] }}
-          style={{ transform: "translateX(-100px)", opacity: 0 }}
-          className="code-box-shape"
-        >
-          
+        <Container sx={{ width: "100%", backgroundColor: "white" }}>
+          <Parallax
+            animation={{ x: 0, opacity: 1, playScale: [0.1, 0.5] }}
+            style={{ transform: "translateX(-100px)", opacity: 0 }}
+            className="code-box-shape"
+          >
             <Box p={1} width="100%">
               <Typography
                 textAlign="center"
-                sx={{ color: "black", fontSize: isDesktop ? 16 : 13 }}
+                sx={{ color: "black", fontSize: isDesktop ? 18 : 15 }}
               >
-                Creditos Yadiel PERU S.A.C Legalmente Constituida, en el año
-                2023.es una FINTECH DE PRESTAMOS que ofrece soluciones ágiles,
-                transparentes y a la medida para todo público con capitales 100%
-                Peruanos y registrada en la SBS ,solicíta tu crédito desde la
-                comodidad de tu hogar nosotros nos encargamos del resto. Nuestra
-                mision es colaborar para lograr la inclusion financiera de más
-                Peruanos Tenemos diferentes productos de acuerdo a tu necesidad.
+                Créditos Yadiel PERU S.A.C, legalmente constituida en el año
+                2023, es una FINTECH DE PRÉSTAMOS que ofrece soluciones ágiles,
+                transparentes y a medida para todo el público, con capitales
+                100% peruanos y registrada en la SBS. Solicita tu crédito desde
+                la comodidad de tu hogar, nosotros nos encargamos del resto.
+                Nuestra misión es colaborar para lograr la inclusión financiera
+                de más peruanos. Tenemos diferentes productos de acuerdo a tus
+                necesidades.
               </Typography>
             </Box>
-         
-        </Parallax>
+          </Parallax>
 
-        <Parallax
-          animation={{ x: 0, opacity: 1, playScale: [0.1, 0.5] }}
-          style={{ transform: "translateX(-100px)", opacity: 0 }}
-          className="code-box-shape"
-        >
-          
-            <Box  width="100%">
+          <Parallax
+            animation={{ x: 0, opacity: 1, playScale: [0.1, 0.5] }}
+            style={{ transform: "translateX(-100px)", opacity: 0 }}
+            className="code-box-shape"
+          >
+            <Box width="100%">
               <Typography
                 textAlign="left"
                 sx={{ color: "black", fontSize: isDesktop ? 17 : 16 }}
@@ -85,7 +73,7 @@ const Info = () => {
                   margin: isDesktop ? 2 : 1,
 
                   fontWeight: "bold",
-                  fontSize: isDesktop ? 18 : 10,
+                  fontSize: isDesktop ? 20 : 12,
                 }}
               >
                 PRESTANEGOCIO
@@ -97,31 +85,29 @@ const Info = () => {
                   color: "black",
                   margin: isDesktop ? 2 : 1,
 
-                  fontSize: isDesktop ? 15 : 13,
+                  fontSize: isDesktop ? 18 : 15,
                 }}
               >
-                En nuestro pais, es habitual que gran parte de la poblacion
-                tenga ingresos semanales o incluso diarios ,es por eso que,a la
-                hora de pedir un prestamo ,para muchos sera mas conveniente el
-                pago de las cuotas con esta frecuencia es por eso que tenemos
-                este Producto dirigido a personas naturales con negocio que
-                desarrollan una actividad económica como bodegas
-                librerias,licorerias,bazares ,restaurantes etc etc y que
-                necesiten un prestamo para invertir o algun apuro ocacional y
-                poderlo pagar semanalmente con planes flexibles segun sus
-                necesidades. Para acceder a este producto debes estar bien
-                calificado en el sistema financiero
+                En nuestro país, es común que una gran parte de la población
+                tenga ingresos semanales e incluso diarios. Es por eso que, a la
+                hora de solicitar un préstamo, para muchos será más conveniente
+                el pago de las cuotas con esta frecuencia. Es por eso que
+                ofrecemos este producto dirigido a personas naturales con
+                negocios que desarrollan actividades económicas como bodegas,
+                librerías, licorerías, bazares, restaurantes, etc., y que
+                necesiten un préstamo para invertir o para afrontar alguna
+                eventualidad, y puedan pagarlo semanalmente con planes flexibles
+                adaptados a sus necesidades. Para acceder a este producto, es
+                necesario tener una buena calificación en el sistema financiero.
               </Typography>
             </Box>
-          
-        </Parallax>
+          </Parallax>
 
-        <Parallax
-          animation={{ x: 0, opacity: 1, playScale: [0.1, 0.5] }}
-          style={{ transform: "translateX(-100px)", opacity: 0 }}
-          className="code-box-shape"
-        >
-          
+          <Parallax
+            animation={{ x: 0, opacity: 1, playScale: [0.1, 0.5] }}
+            style={{ transform: "translateX(-100px)", opacity: 0 }}
+            className="code-box-shape"
+          >
             <Box p={1} width="100%">
               <Typography
                 textAlign="left"
@@ -130,7 +116,7 @@ const Info = () => {
                   margin: isDesktop ? 2 : 1,
                   marginTop: 3,
                   fontWeight: "bold",
-                  fontSize: isDesktop ? 18 : 10,
+                  fontSize: isDesktop ? 20 : 12,
                 }}
               >
                 PRESTAPRENDA
@@ -142,34 +128,32 @@ const Info = () => {
                   color: "black",
                   margin: isDesktop ? 2 : 1,
 
-                  fontSize: isDesktop ? 15 : 13,
+                  fontSize: isDesktop ? 18 : 15,
                 }}
               >
-                Funciona como una Casa de Empeño online ,El procedimiento es
-                sencillo la persona que quiere empeñar algun articulo acude a
-                nosotros sube sus datos en el formulario de solicitud de credito
-                ,nosotros analizamos su prenda hacemos una oferta de prestamo y,
-                en caso de aceptarla nosotros mismos nos encargamos de recoger
-                la prenda y evaluar que este en buenas condiciones. este
-                Producto diseñado para clientes interesados en creditos
-                prendarios con garantia en joyas de oro, electrodomesticos
-                nuevos o seminuevos,tecnologia como laptops tablets u otros
-                objetos de valor en caso de que los intereses no sean pagados
-                dentro los plazos pactados recuerde que los bienes que deja en
-                garantia son el respaldo de su prestamos,si su contrato vence o
-                no puede pagar , uSted no queda mal con nostros,ni arruina su
-                historial de credito.
+                Funcionamos también como una Casa de Empeño en línea. El
+                procedimiento es sencillo: la persona que desea empeñar algún
+                artículo acude a nosotros, completa sus datos en el formulario
+                de solicitud de crédito. Luego, nosotros analizamos su prenda,
+                hacemos una oferta de préstamo y, en caso de que la acepten, nos
+                encargamos de recoger la prenda y evaluar que esté en buenas
+                condiciones. Este producto está diseñado para clientes
+                interesados en créditos prendarios con garantía en joyas de oro,
+                electrodomésticos nuevos o seminuevos, tecnología como laptops,
+                tablets u otros objetos de valor. En caso de que los intereses
+                no sean pagados dentro de los plazos pactados, recuerde que los
+                bienes que deja en garantía respaldan su préstamo. Si su
+                contrato vence o no puede pagar, usted no queda mal con nosotros
+                ni arruina su historial de crédito.
               </Typography>
             </Box>
-        
-        </Parallax>
+          </Parallax>
 
-        <Parallax
-          animation={{ x: 0, opacity: 1, playScale: [0.1, 0.5] }}
-          style={{ transform: "translateX(-100px)", opacity: 0 }}
-          className="code-box-shape"
-        >
-          
+          <Parallax
+            animation={{ x: 0, opacity: 1, playScale: [0.1, 0.5] }}
+            style={{ transform: "translateX(-100px)", opacity: 0 }}
+            className="code-box-shape"
+          >
             <Box p={1} width="100%">
               <Typography
                 textAlign="left"
@@ -178,7 +162,7 @@ const Info = () => {
                   margin: isDesktop ? 2 : 1,
                   marginTop: 3,
                   fontWeight: "bold",
-                  fontSize: isDesktop ? 18 : 10,
+                  fontSize: isDesktop ? 20 : 12,
                 }}
               >
                 PRESTAMOS PARA MAL CALIFICADOS (INFOCORP)
@@ -190,7 +174,7 @@ const Info = () => {
                   color: "black",
                   margin: isDesktop ? 2 : 1,
 
-                  fontSize: isDesktop ? 13 : 12,
+                  fontSize: isDesktop ? 18 : 15,
                 }}
               >
                 Si estás mal calificado en el sistema financiero e infocorp
@@ -200,19 +184,14 @@ const Info = () => {
                 infocorp también te damos la oportunidad de trabajar con
                 nosotros consulta cómo al interno.
               </Typography>
-              
             </Box>
-         
-        </Parallax>
+          </Parallax>
 
-        
-
-        <Parallax
-          animation={{ x: 0, opacity: 1, playScale: [0.1, 0.5] }}
-          style={{ transform: "translateX(-100px)", opacity: 0 }}
-          className="code-box-shape"
-        >
-          
+          <Parallax
+            animation={{ x: 0, opacity: 1, playScale: [0.1, 0.5] }}
+            style={{ transform: "translateX(-100px)", opacity: 0 }}
+            className="code-box-shape"
+          >
             <Box p={1} width="100%">
               <Typography
                 textAlign="left"
@@ -221,7 +200,7 @@ const Info = () => {
                   margin: isDesktop ? 2 : 1,
                   marginTop: 3,
                   fontWeight: "bold",
-                  fontSize: isDesktop ? 18 : 10,
+                  fontSize: isDesktop ? 20 : 12,
                 }}
               >
                 ASESORAMIENTO FINANCIERO
@@ -232,30 +211,28 @@ const Info = () => {
                   color: "black",
                   margin: isDesktop ? 2 : 1,
 
-                  fontSize: isDesktop ? 15 : 13,
+                  fontSize: isDesktop ? 18 : 15,
                 }}
               >
-                Colaboramos con nuestros clientes para cambiar su vida
-                totalmente y comenzar nuevamente su historial financiero ,si
-                tienes deudas registradas en infocorp negociamos tus deudas te
-                orientamos y planificamos acciones para poder lograr tu
-                inclucion nuevamente al sistema financiero , te brindamos
-                asesoria hasta que logres tus objetivos te enseñamos estrategias
-                y tecnicas de como llevar tus finanzas y mejorar tu calidad de
-                vida. pagaste tu deuda y aun figuras en infocorp? ninguna
-                entidad Financiera te da credito? aunque no lo creas a muchas
-                personas les pasa lo mismo ,nosotros tenemos la solucion, aqui
-                te enseñamos como cambiar eso y ser sujeto a credito nuevamente
-                ,tambien de orientamos y mostramos nuevas herramientas
-                financieras para que mejores tus calificaciones y obtengas
-                creditos mas altos en mediano y corto plazo.
+                Colaboramos con nuestros clientes para cambiar sus vidas
+                completamente y empezar de nuevo su historial financiero. Si
+                tienes deudas registradas en Infocorp, negociamos tus deudas, te
+                orientamos y planificamos acciones para lograr tu inclusión
+                nuevamente en el sistema financiero. Te brindamos asesoría hasta
+                que alcances tus objetivos, te enseñamos estrategias y técnicas
+                para manejar tus finanzas y mejorar tu calidad de vida. ¿Has
+                pagado tu deuda y todavía apareces en Infocorp? ¿Ninguna entidad
+                financiera te concede crédito? Aunque no lo creas, a muchas
+                personas les ocurre lo mismo. Nosotros tenemos la solución. Aquí
+                te enseñamos cómo cambiar eso y convertirte en sujeto de crédito
+                nuevamente. También te orientamos y mostramos nuevas
+                herramientas financieras para que mejores tus calificaciones y
+                obtengas créditos más altos a corto y mediano plazo.
               </Typography>
             </Box>
-         
-        </Parallax>
+          </Parallax>
         </Container>
       </div>
-
     </Box>
   );
 };

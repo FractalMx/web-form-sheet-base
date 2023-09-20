@@ -32,7 +32,9 @@ function MainLayout() {
           zIndex: 9999,
           bottom: 10,
           right: 10,
-        }} href="https://wa.me/numero-de-tu-contacto">
+          color:"white",
+          backgroundColor:"#25D366"
+        }} href="https://wa.me/952107959">
         <WhatsAppIcon />
       </Fab>
     </Box>

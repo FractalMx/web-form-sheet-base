@@ -6,7 +6,8 @@ import './Info2.css'; // Asegúrate de tener el archivo CSS
 const FeaturesSection = () => {
   const isDesktop = useMediaQuery("(min-width: 1024px)");
   return (
-    <Box className="features-section" display="flex" justifyContent="center" alignContent="center" flexDirection={isDesktop ?"row" :"column" } py={6}>
+    <Box className="features-section" height="80%"display="flex" justifyContent="center" alignContent="center" flexDirection={isDesktop ?"row" :"column" } py={6} mt={1}
+    mb={1}>
       <div className="feature-column">
         <div className="feature-item">
           <CheckCircleIcon className="check-icon" sx={{ fontSize: isDesktop ? 28 : 20 }}/>

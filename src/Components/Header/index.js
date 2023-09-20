@@ -37,7 +37,7 @@ const TikTokIcon = ({ color = "#104409" }) => {
 };
 const Header = () => {
   const isDesktop = useMediaQuery("(min-width: 1024px)");
-  const facebookUrl = 'https://www.facebook.com/yadiel.wardextre?mibextid=LQQJ4d';
+  const facebookUrl = 'https://www.facebook.com/profile.php?id=61550605730442&mibextid=2JQ9oc';
   const tiktokUrl = 'https://www.tiktok.com/@creditos.yadiel?_t=8fWj3e94WWM&_r=1';
   const instagramUrl = ' https://www.instagram.com/invites/contact/?i=rw6385w85jir&utm_content=s3ijkku';
 
@@ -48,7 +48,7 @@ const Header = () => {
       sx={{ backgroundColor: "white" }}
     >
       {!isDesktop ? (
-        <div style={{ height: "6vh", backgroundColor: "#e46721" }}>
+        <div style={{ height: "10vh", backgroundColor: "#e46721" }}>
           <div className="contactNoDesktop">
             <div className="contact-info-nodesktop">
               <Email />
@@ -114,7 +114,7 @@ const Header = () => {
             className="solicitar-button"
             to={"/#solicitar"}
           >
-            Solicitar
+            Solicitar tu crédito
           </Button>
         </div>
       </Toolbar>
