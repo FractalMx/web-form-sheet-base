@@ -58,7 +58,7 @@ const LoanRequirementsSection = () => {
                 >
                   <WorkIcon className="icon" sx={{ fontSize: 50 }} />
                   <Typography variant="body1" className="requirement-text">
-                    Antigüedad laboral de 4 meses
+                    Negocio activo
                   </Typography>
                 </Box>
                 <Box
@@ -84,7 +84,7 @@ const LoanRequirementsSection = () => {
                 >
                   <MailOutlineIcon className="icon" sx={{ fontSize: 60 }} />
                   <Typography variant="body1" className="requirement-text">
-                    Cuenta bancaria titular
+                    Cuenta bancaria a su nombre
                   </Typography>
                 </Box>
               </div>
@@ -101,49 +101,27 @@ const LoanRequirementsSection = () => {
               flexDirection={(isDesktop) ? "row" :"column"}
             >
               <Typography variant="h6" textAlign= {(isDesktop) ? "left":"center"}>
-                <b>Solicítalo con nuestros asesores:</b>
+                <b>Solicíta tu préstamo o crédito con nuestros asesores:</b>
               </Typography>
               <Button
                 variant="contained"
                 color="success" 
                 sx={{ ml: 1, m:1,   width:(isDesktop) ? "35%":"90%" }}
                 startIcon={<CallIcon />}
-                href="https://wa.me/952107959"
+                href="https://wa.me/51952107949"
               >
-                Ricardo +51 952-107-959
+                Ricardo +51 952-107-949
               </Button>
               <Button
                 variant="contained"
                 color="success"
                 sx={{  width:(isDesktop) ? "35%":"90%" }}
                 startIcon={<CallIcon />}
-                href="https://wa.me/923824245"
+                href="https://wa.me/51923824245"
               >
                 Kelly +51 923-824-245
               </Button>
             </Box>
-          </Grid>
-          <Grid item sm={11}>
-            <div className="additional-content">
-              <Typography
-                variant="body2"
-                sx={{
-                  color: "#999999",
-                  fontSize: "12px",
-                  marginBottom: "-20px",
-                }}
-              >
-                Tasa Efectiva Anual (TEA) sin IGV de 81% | Tasa Costo Efectivo
-                Anual (TCEA) sin IGV Mínima: 101% Máximo: 302%. Ejemplo de
-                préstamo: Monto solicitado $200 a 01 mes | TEA sin IGV 81% –
-                TCEA sin IGV 524% | Total a pagar S/45.00| El monto mínimo de
-                financiación es $200 y el máximo $1,000 | Monto solicitado
-                $xw1,000 a 10 meses |TEA sin IGV 83% – TCEA sin IGV 524% | Total
-                a pagar $468.00 | Las cuotas del préstamo son Mensuales, iguales
-                y consecutivas. El otorgamiento del préstamo está sujeto a
-                evaluación crediticia.
-              </Typography>
-            </div>
           </Grid>
         </Grid>
         <Grid

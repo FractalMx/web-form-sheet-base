@@ -7,6 +7,10 @@ import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
 import CreditCardIcon from '@mui/icons-material/CreditCard';
 import './ComoPagar.css';
 import celular from '../../img/celular.jpeg';
+import Bim from '../../img/Bim.jpg';
+import Yape from '../../img/Yape.jpg';
+import Plin from '../../img/Plin.jpg';
+
 import backgroundYoungMan from '../../img/young-man.jpg';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 const useStyles = makeStyles((theme) => ({
@@ -110,7 +114,7 @@ const useStyles = makeStyles((theme) => ({
   },
   buttonText2: {
     marginLeft: '8px',
-    color: "#358930"
+    color: "white"
   },
  
   '@media (min-width: 900px)': {
@@ -190,10 +194,14 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const bankImages = [
-  { name: 'BCP', url: 'https://conference.chamilo.org/2023/en/wp-content/uploads/2016/08/logo_1_b-768x357.jpg' },
-  { name: 'BBVA', url: 'https://www.bbva.com/wp-content/uploads/2019/04/Logo-BBVA-1920x1080.jpg' },
-  { name: 'Interbank', url: 'https://www.limaeasy.com/media/reviews/photos/thumbnail/1500x500s/19/7f/57/interbank-peru-95-1621146444.jpg' },
-  { name: 'Scotiabank', url: 'https://cotizator.com/wp-content/uploads/2020/07/Screenshot-2019-02-21-22.34.09-1-300x169.png' },
+  { name: 'BCP', url: 'https://conference.chamilo.org/2023/en/wp-content/uploads/2016/08/logo_1_b-768x357.jpg',width: '100%' },
+  { name: 'BBVA', url: 'https://www.bbva.com/wp-content/uploads/2019/04/Logo-BBVA-1920x1080.jpg',width: '100%' },
+  { name: 'Interbank', url: 'https://www.limaeasy.com/media/reviews/photos/thumbnail/1500x500s/19/7f/57/interbank-peru-95-1621146444.jpg', width: '100%'},
+  { name: 'Scotiabank', url: 'https://cotizator.com/wp-content/uploads/2020/07/Screenshot-2019-02-21-22.34.09-1-300x169.png',width: '100%' },
+  { name: 'Bim', url: Bim, width: '60%' },
+  { name: 'Plin', url: Plin, width: '60%' },
+  { name: 'Yape', url: Yape, width: '80%' },
+
 ];
 
 const ComoPagar = () => {
@@ -293,19 +301,47 @@ const ComoPagar = () => {
         </Paper>
       </Box>
       <Box sx={{m:4,display:"flex", justifyContent:"center", flexDirection:"column" }}>
-      
+      <Box className={classes.whatsApp} maxWidth="100%"
+        width="100%"
+        display="flex"
+        justifyContent="center">
+        <Typography variant="h4" align="center" className={classes.textWS}>
+          <b>¿Dónde enviar mi recibo de pago?</b>
+        </Typography>
+        <Typography variant="body1" align="center" m={2} className={classes.textWS}>
+          Para validar su pago es importante enviar tu recibo de consignación
+          o captura de la transacción con tus datos y número de operación
+          a nuestro canal de cobranza para poder registrarlo, recuerda no perder
+          tu recibo ya que solo podemos validar el pago con el número de
+          operación y tus datos.
+        </Typography>  
+        <Button variant="contained" sx={{
+          backgroundColor: "#e45000", '&:hover': {
+            backgroundColor: "#e46721",
+           
+          }
+          
+        }} className={classes.button2} href="https://wa.me/51924174718">
+          <WhatsAppIcon style={{color: "white"}} />
+          <span className={classes.buttonText2}>Canal de cobranza</span>
+        </Button>
+        <Typography variant="body2" align="center" m={2} style={{marginTop:10}}>
+          Horario de atención: lunes a sábados de 9:00 a.m. a 6:00 p.m.
+        </Typography>
+      </Box>
       <Typography variant="h6" gutterBottom align="center"mb={5}>
-      Ahora puedes pagar tu préstamo en las siguientes entidades bancarias, que no se te pase la fecha de vencimiento de tus cuotas. 
+      Para tu comodidad puedes pagar tus cuotas online, por aplicativos y agentes bancarios, 
+      que no se te pase la fecha de vencimiento de tus cuotas.
       <b>¡Evita los intereses y penalidades!</b>
       </Typography>
-      <Grid container spacing={2}>
+      <Grid container spacing={2} >
         {bankImages.map((bank, index) => (
-          <Grid item key={index} xs={6} sm={3}>
-            <Box elevation={1}>
+          <Grid item key={index} xs={4} sm={3}>
+            <Box elevation={1}  sx={{display:'flex',justifyContent:"center", alignContent:"center",margin:2}}>
               <img
                 src={bank.url}
                 alt={bank.name}
-                style={{ width: '100%', height: 'auto' }}
+                style={{ width:bank.width, height: 'auto', margin:4,}}
               />
             </Box>
           </Grid>
@@ -329,7 +365,7 @@ const ComoPagar = () => {
             backgroundColor: "#00bb2d",
            
           }
-        }} className={classes.button}   href="https://wa.me/952107959">
+        }} className={classes.button}   href="https://wa.me/51952107959">
           <WhatsAppIcon />
           <span className={classes.buttonText}>Ricardo +51 952-107-959</span>
         </Button>
@@ -338,36 +374,12 @@ const ComoPagar = () => {
             backgroundColor: "#00bb2d",
            
           }
-        }} className={classes.button}   href="https://wa.me/923824245">
+        }} className={classes.button}   href="https://wa.me/51923824245">
           <WhatsAppIcon />
           <span className={classes.buttonText}>Kelly +51 923-824-245</span>
         </Button>
       </Box>
-      <Box className={classes.whatsApp} maxWidth="100%"
-        width="100%"
-        display="flex"
-        mt={5}
-        justifyContent="center">
-        <Typography variant="h4" align="center" className={classes.textWS}>
-          <b>¿Dónde enviar mi recibo de pago?</b>
-        </Typography>
-        <Typography variant="body1" align="center" m={2} className={classes.textWS}>
-          Luego de realizar tu pago envía tu recibo de consignación al siguiente número:
-        </Typography>  
-        <Button variant="contained" sx={{
-          backgroundColor: "white", '&:hover': {
-            backgroundColor: "white",
-           
-          }
-          
-        }} className={classes.button2} href="https://wa.me/924174718">
-          <WhatsAppIcon style={{color: "#358930"}} />
-          <span className={classes.buttonText2}>Canal de cobranza</span>
-        </Button>
-        <Typography variant="body2" align="center" m={2} style={{marginTop:10}}>
-          Horario de atención: lunes a sábados de 9:00 a.m. a 6:00 p.m.
-        </Typography>
-      </Box>
+      
     </Box >
   );
 

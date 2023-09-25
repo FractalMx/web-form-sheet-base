@@ -59,7 +59,8 @@ const Header = () => {
             <div className="contact-info-nodesktop">
               <Phone />
               <Typography variant="body2" color="#104409">
-                (923) 824-245
+                Central telefónica
+                (924) 174-718
               </Typography>
             </div>
           </div>
@@ -82,16 +83,20 @@ const Header = () => {
               <div className="contact-info">
                 <Phone />
                 <Typography variant="body2" color="#e46721">
-                
-                  (923) 824-245
+                  Central telefónica
+                  (924) 174-718
                 </Typography>
               </div>
             </div>
           ) : (
             <div />
           )}
-
-          <div className="social-buttons">
+          <div style={{marginRight:10}}>
+            <Typography variant="body2" color="#104409">
+                  <b>Síguenos en nuestras redes sociales</b>
+            </Typography>
+            <div className="social-buttons">
+          
             <IconButton component="a" href={facebookUrl} target="_blank">
               <Facebook sx={{ color: "#104409" }} />
             </IconButton>
@@ -102,6 +107,8 @@ const Header = () => {
               <Instagram sx={{ color: "#104409" }} />
             </IconButton>
           </div>
+          </div>
+          
           <Button
             component={HashLink}
             variant="contained"
