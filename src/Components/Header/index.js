@@ -50,12 +50,12 @@ const Header = () => {
       {!isDesktop ? (
         <div style={{ height: "10vh", backgroundColor: "#e46721" }}>
           <div className="contactNoDesktop">
-            <div className="contact-info-nodesktop">
+           {/*  <div className="contact-info-nodesktop">
               <Email />
               <Typography variant="body2" color="#104409">
               creditosyadelcontacto@creditosyadel.com
               </Typography>
-            </div>
+            </div> */}
             <div className="contact-info-nodesktop">
               <Phone />
               <Typography variant="body2" color="#104409">
@@ -74,12 +74,12 @@ const Header = () => {
         <div className="contact">
           {isDesktop ? (
             <div>
-              <div className="contact-info">
+              {/* <div className="contact-info">
                 <Email />
                 <Typography variant="body2" color="#e46721">
                   creditosyadelcontacto@creditosyadel.com
                 </Typography>
-              </div>
+              </div> */}
               <div className="contact-info">
                 <Phone />
                 <Typography variant="body2" color="#e46721">
@@ -114,6 +114,7 @@ const Header = () => {
             variant="contained"
             sx={{
               backgroundColor: "#e46721",
+              marginBottom:1,
               "&:hover": {
                 backgroundColor: "#e45000",
                 height: "42%",

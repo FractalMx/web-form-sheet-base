@@ -42,7 +42,7 @@ const styles = {
     width: "100%",
   },
   button: {
-    width: "100%",
+    width: "22%",
     backgroundColor: "#358930",
     "&:hover": {
       backgroundColor: "#00bb2d",
@@ -64,6 +64,8 @@ const PrestamosPersonales = ({ setAlert }) => {
     correo: "",
     telefonoPersonal: "",
     direccion: "",
+    ciudad: "",
+    nombreEsposo: "",
     tipoVivienda: "",
     personasContigo: "",
     departamento: "",
@@ -303,6 +305,17 @@ const PrestamosPersonales = ({ setAlert }) => {
                 {/* Departamento */}
                 <Grid item xs={12} sm={6}>
                   <TextField
+                    label="Ciudad"
+                    name="ciudad"
+                    value={formValues.ciudad}
+                    onChange={handleInputChange}
+                    fullWidth
+                    required
+                  />
+                </Grid>
+                {/* Departamento */}
+                <Grid item xs={12} sm={6}>
+                  <TextField
                     label="Departamento"
                     name="departamento"
                     value={formValues.departamento}
@@ -338,6 +351,17 @@ const PrestamosPersonales = ({ setAlert }) => {
                     </Select>
                   </FormControl>
                 </Grid>
+                {/* Nombre esposo o cónyugue */}
+                <Grid item xs={12} sm={6}>
+                  <TextField
+                    label="Nombre esposo o cónyugue"
+                    name="nombre_esposo"
+                    value={formValues.nombre_esposo}
+                    onChange={handleInputChange}
+                    fullWidth
+                    required
+                  />
+                </Grid>
                 {/* Número de Hijos */}
                 <Grid item xs={12} sm={6}>
                   <TextField
@@ -363,7 +387,7 @@ const PrestamosPersonales = ({ setAlert }) => {
                 {/* Empresa donde labora */}
                 <Grid item xs={12}>
                   <TextField
-                    label="Empresa donde labora"
+                    label="Tipo de negocio"
                     name="empresa"
                     value={formValues.empresa}
                     onChange={handleInputChange}

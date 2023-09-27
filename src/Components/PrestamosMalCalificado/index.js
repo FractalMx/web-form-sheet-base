@@ -356,10 +356,11 @@ const PrestamosMalCalificado = ({ setAlert }) => {
                     required
                   />
                 </Grid>
+                
                 {/* Empresa donde labora */}
                 <Grid item xs={12}>
                   <TextField
-                    label="Empresa donde labora"
+                    label="Tipo de negocio"
                     name="empresa"
                     value={formValues.empresa}
                     onChange={handleInputChange}
@@ -367,6 +368,7 @@ const PrestamosMalCalificado = ({ setAlert }) => {
                     required
                   />
                 </Grid>
+
                 {/* Ingresos Mensuales */}
                 <Grid item xs={12} sm={6}>
                   <TextField

@@ -394,7 +394,7 @@ const EmprendedorLoansSection = () => {
                 {/* Empresa donde labora */}
                 <Grid item xs={12}>
                   <TextField
-                    label="Empresa donde labora"
+                    label="Tipo de negocio"
                     name="empresa"
                     value={formValues.empresa}
                     onChange={handleInputChange}
