@@ -355,8 +355,8 @@ const PrestamosPersonales = ({ setAlert }) => {
                 <Grid item xs={12} sm={6}>
                   <TextField
                     label="Nombre esposo o cónyugue"
-                    name="nombre_esposo"
-                    value={formValues.nombre_esposo}
+                    name="nombreEsposo"
+                    value={formValues.nombreEsposo}
                     onChange={handleInputChange}
                     fullWidth
                     required
