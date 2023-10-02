@@ -22,8 +22,8 @@ const useStyles = makeStyles((theme) => ({
     padding: '5px',
     backgroundImage: `url(${backgroundYoungMan})`,
     backgroundSize: 'cover',
-    height: '170vh',
-    minHeight: '170vh',
+    height: '100vh',
+    minHeight: '100vh',
   },
   whatsApp: {
     display: 'flex',

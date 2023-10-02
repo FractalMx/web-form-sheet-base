@@ -67,6 +67,8 @@ const EmprendedorLoansSection = () => {
     correo: "",
     telefonoPersonal: "",
     direccion: "",
+    ciudad: "",
+    nombreEsposo: "",
     tipoVivienda: "",
     personasContigo: "",
     departamento: "",
@@ -80,7 +82,7 @@ const EmprendedorLoansSection = () => {
     montoPedido: "",
     cuotas: "",
     codigoInvitacion: "",
-  });
+  }); 
 
   const handleInputChange = (event) => {
     const { name, value, type, checked } = event.target;
@@ -331,6 +333,17 @@ const EmprendedorLoansSection = () => {
                     type="number"
                   />
                 </Grid>
+                {/* ciudad */}
+                <Grid item xs={12} sm={6}>
+                  <TextField
+                    label="Ciudad"
+                    name="ciudad"
+                    value={formValues.ciudad}
+                    onChange={handleInputChange}
+                    fullWidth
+                    required
+                  />
+                </Grid>
                 {/* Departamento */}
                 <Grid item xs={12} sm={6}>
                   <TextField
@@ -369,6 +382,7 @@ const EmprendedorLoansSection = () => {
                     </Select>
                   </FormControl>
                 </Grid>
+                
                 {/* Número de Hijos */}
                 <Grid item xs={12} sm={6}>
                   <TextField
