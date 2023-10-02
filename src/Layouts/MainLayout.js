@@ -28,7 +28,7 @@ function MainLayout() {
         <Outlet />
       </Box>
       <Footer
-        description="Creditos Yadiel PERU S.A.C Legalmente Constituida, en el año
+        description="Creditos Yadiel PERU S.A.C  RUC: 20611453281 Legalmente Constituida, en el año
                 2023"
         title="Créditos Yadiel"
       />

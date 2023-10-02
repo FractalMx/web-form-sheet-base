@@ -48,7 +48,7 @@ const Header = () => {
       sx={{ backgroundColor: "white" }}
     >
       {!isDesktop ? (
-        <div style={{ height: "10vh", backgroundColor: "#e46721" }}>
+        <div style={{ height: "8vh", backgroundColor: "#e46721" }}>
           <div className="contactNoDesktop">
            {/*  <div className="contact-info-nodesktop">
               <Email />
@@ -56,7 +56,7 @@ const Header = () => {
               creditosyadelcontacto@creditosyadel.com
               </Typography>
             </div> */}
-            <div className="contact-info-nodesktop">
+            <div className="contact-info-nodesktop" style={{margin:7}}>
               <Phone />
               <Typography variant="body2" color="#104409">
                 Central telefónica
@@ -69,9 +69,15 @@ const Header = () => {
         <div />
       )}
       <Toolbar className="toolbar">
-        <img src={logo} alt="Logo" className="logo" />
+        <div className="divLogo">
+          <img src={logo} alt="Logo" className="logo" />
+          <Typography variant="body1" color="#e46721">
+            <b>RUC: 20611453281</b>
+          </Typography>
+        </div>
+      
 
-        <div className="contact">
+        <div className="contact" style={{display:"flex", flexDirection:"column", alignItems:"flex-end"}}>
           {isDesktop ? (
             <div>
               {/* <div className="contact-info">
@@ -91,22 +97,22 @@ const Header = () => {
           ) : (
             <div />
           )}
-          <div style={{marginRight:10}}>
+          <div >
             <Typography variant="body2" color="#104409">
                   <b>Síguenos en nuestras redes sociales</b>
             </Typography>
             <div className="social-buttons">
           
-            <IconButton component="a" href={facebookUrl} target="_blank">
-              <Facebook sx={{ color: "#104409" }} />
-            </IconButton>
-            <IconButton component="a" href={tiktokUrl} target="_blank">
-              <TikTokIcon sx={{ color: "#104409" }} />
-            </IconButton>
-            <IconButton component="a" href={instagramUrl} target="_blank">
-              <Instagram sx={{ color: "#104409" }} />
-            </IconButton>
-          </div>
+              <IconButton component="a" href={facebookUrl} target="_blank">
+                <Facebook sx={{ color: "#104409" }} />
+              </IconButton>
+              <IconButton component="a" href={tiktokUrl} target="_blank">
+                <TikTokIcon sx={{ color: "#104409" }} />
+              </IconButton>
+              <IconButton component="a" href={instagramUrl} target="_blank">
+                <Instagram sx={{ color: "#104409" }} />
+              </IconButton>
+            </div>
           </div>
           
           <Button

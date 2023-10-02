@@ -370,9 +370,9 @@ const ComoPagar = () => {
             backgroundColor: "#00bb2d",
 
           }
-        }} className={classes.button} href="https://wa.me/51952107959">
+        }} className={classes.button} href="https://wa.me/51952107949">
           <WhatsAppIcon />
-          <span className={classes.buttonText}>Ricardo +51 952-107-959</span>
+          <span className={classes.buttonText}>Ricardo +51 952-107-949</span>
         </Button>
         <Button variant="contained" sx={{
           marginTop: 1,

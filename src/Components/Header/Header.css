@@ -11,17 +11,18 @@
   
   .logo {
     height: 100px;
+    
   }
   
   .contact {
     display: flex;
-    align-items: center;
+   
    
   }
   .contactNoDesktop {
     display: flex;
-    margin:10;
-    justify-content: center;
+   
+   
     flex-direction: column;
     align-items: center;
    
@@ -29,15 +30,15 @@
   
   .contact-info-nodesktop {
     display: flex;
-    align-items: center;
     
-    margin-top:  2px;;
+    
+    margin-top:  2px;
   }
   
   .contact-info {
     display: flex;
-    align-items: center;
-    margin-right: 10px;
+    
+   
   }
   
   .contact-info svg {
@@ -46,8 +47,9 @@
   
   .social-buttons {
     display: flex;
-    align-items: center;
-    margin-right: 10px;
+    align-items: flex-end;
+    justify-content: flex-end;
+    
   }
   
   .solicitar-button {

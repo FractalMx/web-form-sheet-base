@@ -42,7 +42,7 @@ const Info = () => {
                 textAlign="center"
                 sx={{ color: "black", fontSize: isDesktop ? 18 : 15 }}
               >
-                Créditos Yadiel PERU S.A.C, legalmente constituida en el año
+                Créditos Yadiel PERU S.A.C,   <b>RUC: 20611453281</b>, legalmente constituida en el año
                 2023, es una FINTECH DE PRÉSTAMOS que ofrece soluciones ágiles,
                 transparentes y a medida para todo el público, con capitales
                 100% peruanos y registrada en la SBS. Solicita tu crédito desde
